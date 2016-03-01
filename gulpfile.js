@@ -22,7 +22,7 @@ function inc(importance) {
         .pipe(bump({ type: importance }))
         // save it back to filesystem 
         .pipe(gulp.dest('./'))
-        // commit the changed version number 
+        // commit the changed version number
         .pipe(git.commit('Release v' + newVer))
         // **tag it in the repository** 
         //.pipe(git.tag('v' + newVer));
@@ -35,6 +35,18 @@ function inc(importance) {
 gulp.task('patch', ['dist'], function () { return inc('patch'); })
 gulp.task('feature', ['dist'], function () { return inc('minor'); })
 gulp.task('release', ['dist'], function () { return inc('major'); })
+
+gulp.task('push', function () {
+    console.info('Pushing...');
+    return git.push('upstream', 'master', { args: " --tags" }, function (err) {
+        if (err) {
+            console.error(err);
+            throw err;
+        } else {
+            console.info('done pushing to github!');
+        }
+    });
+});
 
 //less compilation
 gulp.task('less', function () {
