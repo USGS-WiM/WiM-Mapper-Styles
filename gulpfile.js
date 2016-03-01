@@ -22,6 +22,8 @@ function inc(importance) {
         .pipe(bump({ type: importance }))
         // save it back to filesystem 
         .pipe(gulp.dest('./'))
+        // add files to git
+        .pipe(git.add())
         // commit the changed version number 
         .pipe(git.commit('Release v' + newVer))
         // **tag it in the repository** 
@@ -47,6 +49,11 @@ gulp.task('push', function () {
             console.info('done pushing to github!');
         }
     });
+});
+
+gulp.task('addfiles', function() {
+    return gulp.src('./*')
+        .pipe(git.add());
 });
 
 //less compilation
