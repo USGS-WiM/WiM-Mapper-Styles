@@ -4,14 +4,18 @@ Styling for generator-wim generated mapping apps
 
 ### To compile base.css
 
-#### 1.  Install required software
+#### Install required software
 ```
 npm install -g less
 ```
 
-#### 2.  Compile CSS
+#### 1.  Get project dependencies
 ```
 npm install
+```
+
+#### 2.  Compile CSS
+```
 cd less
 lessc base.less ../css/base.css
 ```
@@ -32,25 +36,25 @@ gulp release   # makes v0.2.1 → v1.0.0
 ```
 
 ##### Step 2.   
- Push the commit that contains the json files with bumped versions to your personal github repo 
+Push the commit that contains the json files with bumped versions to your personal github repo 
  
 ```
 git push origin master
 ```
 
 ##### Step 3.   
- Create and merge pull request with version incremented (github.com)
+Create and merge pull request with version incremented via github.com
 
 ##### Step 4.  
 Get latest version from upstream (all this should be is a commit for the pull request in Step 3.) 
 
 ```
-git pull USGS-WiM master
+git pull upstream master
 ```
 
 ##### Step 5.   
-Run "gulp push" to push the commit with the release tags up to the upstream (WiM) repository.
+Push the commit with the release tags up to the upstream (WiM) repository.
 
 ```
-gulp push
+git push upstream master --tags
 ```

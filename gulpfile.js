@@ -28,7 +28,7 @@ function inc(importance) {
         //.pipe(git.tag('v' + newVer));
         .pipe(git.tag('v' + newVer, 'Version message', function (err) {
             if (err) throw err;
-        }));
+    }));
 }
 
 //tasks for version tags
@@ -36,7 +36,6 @@ gulp.task('patch', ['dist'], function () { return inc('patch'); })
 gulp.task('feature', ['dist'], function () { return inc('minor'); })
 gulp.task('release', ['dist'], function () { return inc('major'); })
 
-//push task for versioning
 gulp.task('push', function () {
     console.info('Pushing...');
     return git.push('upstream', 'master', { args: " --tags" }, function (err) {
@@ -47,11 +46,6 @@ gulp.task('push', function () {
             console.info('done pushing to github!');
         }
     });
-});
-
-gulp.task('addfiles', function() {
-    return gulp.src('./*')
-        .pipe(git.add());
 });
 
 //less compilation
