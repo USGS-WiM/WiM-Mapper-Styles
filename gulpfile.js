@@ -12,14 +12,14 @@ var gulp = require('gulp'),
 var version = require('./package.json').version;
 
 //function for version lookup and tagging
-function inc(importance) {
+function increment(release) {
     //get new version number
-    var newVer = semver.inc(version, importance);
+    var newVer = semver.inc(version, release);
 
     // get all the files to bump version in 
     return gulp.src(['./package.json', './bower.json'])
         // bump the version number in those files 
-        .pipe(bump({ type: importance }))
+        .pipe(bump({ type: release }))
         // save it back to filesystem 
         .pipe(gulp.dest('./'))
         // commit the changed version number
@@ -32,9 +32,9 @@ function inc(importance) {
 }
 
 //tasks for version tags
-gulp.task('patch', ['dist'], function () { return inc('patch'); })
-gulp.task('feature', ['dist'], function () { return inc('minor'); })
-gulp.task('release', ['dist'], function () { return inc('major'); })
+gulp.task('patch', ['dist'], function () { return increment('patch'); });
+gulp.task('feature', ['dist'], function () { return increment('minor'); });
+gulp.task('release', ['dist'], function () { return increment('major'); });
 
 gulp.task('push', function () {
     console.info('Pushing...');
