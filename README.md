@@ -1,4 +1,4 @@
-## WiM-Mapper-Styles
+## WiM-Mapper-Styles PLUNCH
 
 Styling for generator-wim generated mapping apps
 
