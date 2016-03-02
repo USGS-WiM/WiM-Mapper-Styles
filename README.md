@@ -58,3 +58,10 @@ Push the commit with the release tags up to the upstream (WiM) repository.
 ```
 git push upstream master --tags
 ```
+
+------
+
+## Adding as managed bower package to pre-existing app made with generator-wim
+
+##### Step 1.
+Place holder until someone gets around to doing this and can record the process
