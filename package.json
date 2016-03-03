@@ -1,11 +1,15 @@
 {
   "name": "wim-mapper-styles",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "homepage": "https://github.com/USGS-WiM/WiM-Mapper-Styles",
-  "repository": "https://github.com/USGS-WiM/WiM-Mapper-Styles",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:USGS-WiM/WiM-Mapper-Styles.git"
+  },
   "authors": [
     "Martyn Smith <marsmith@usgs.gov>"
   ],
+  "description": "wim-mapper-styles is a set of css ctyles for use with WIM map applications generated from the wim generator",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.6.2",
