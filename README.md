@@ -43,15 +43,24 @@ If no version is specified, bower will retrieve the latest release (which may no
 
 Other ways to specify version:
 
-semver version:    #1.2.3
-version range:    #1.2
-\#~1.2.3
-\#^1.2.3
-\#>=1.2.3 <2.0
-Git tag:     #[tag]
-Git commit SHA:     #[sha]
-Git branch:     #[branch]
-Subversion revision:     #[revision]
+> semver version:    #1.2.3
+>
+> version range:    #1.2
+>
+> \#~1.2.3
+>
+> \#^1.2.3
+>
+> \#>=1.2.3 <2.0
+>
+> Git tag:     #[tag]
+>
+> Git commit SHA:     #[sha]
+>
+> Git branch:     #[branch]
+>
+> Subversion revision:     #[revision]
+
 
 
 ----------
