@@ -1,0 +1,47 @@
+[
+  {
+    "name": "WiM-Mapper-Styles",
+    "organization": "U.S. Geological Survey",
+    "description": "Styling for generator-wim generated mapping apps",
+    "version": "v0.0.0",
+    "status": "Ideation", "Development", "Alpha", "Beta", "Release Candidate", "Production", "Archival"
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain",
+          "URL": "https://github.com/usgs/WiM-Mapper-Styles/blob/master/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://wim.usgs.gov",
+    "downloadURL": "https://github.com/USGS-WiM/WiM-Mapper-Styles/archive/master.zip",
+    "disclaimerURL": "https://github.com/USGS-WiM/WiM-Mapper-Styles/blob/master/DISCLAIMER.md",
+    "repositoryUrl": "https://github.com/USGS-WiM/WiM-Mapper-Styles",
+    "vcs": "git",
+
+    "laborHours": null,
+
+    "tags": [
+      "WiM",
+      "styles",
+      "mapping"
+    ],
+
+    "languages": [
+      "css",
+      "javascript"
+    ],
+
+    "contact": {
+      "name": "Blake Draper",
+      "email": "bdraper@usgs.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2018-02-09"
+    }
+  }
+]
