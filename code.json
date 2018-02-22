@@ -4,7 +4,7 @@
     "organization": "U.S. Geological Survey",
     "description": "Styling for generator-wim generated mapping apps",
     "version": "v0.0.0",
-    "status": "Ideation", "Development", "Alpha", "Beta", "Release Candidate", "Production", "Archival"
+    "status": "Ideation",
 
     "permissions": {
       "usageType": "openSource",
